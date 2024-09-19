@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Different types data in an array</title>
+</head>
+<body onload="gatherItems();">
+  <h1>Different types data in an array</h1>
+  <p id="output"></p>
+  <script>
+    var itemsArr = new Array();
+    var txt = "";
+    
+    itemsArr[0] = "apple";
+    itemsArr[1] = 4 + 8;
+    itemsArr[2] = 3;
+    itemsArr[3] = 2 * 5;
+    itemsArr.forEach(gatherItems);
+    
+    function gatherItems(value, index, array) {
+      txt += value + "<br>";
+    }
+    
+    document.getElementById("output").innerHTML = txt;
+  </script>
+</body>
+</html>
+
