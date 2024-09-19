@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Populating an array</title>
+</head>
+<body onload="gatherItems();">
+  <h1>Populating an array</h1>
+  <p id="output"></p>
+  <script>
+    var peopleList =[];
+    var txt = "";
+
+    peopleList[0] = "Chris Minnick";
+    peopleList[1] = "Eva Holland";
+    peopleList[2] = "Abraham Lincoln";
+    peopleList[99] = "Tina Turner";
+    peopleList.forEach(gatherItems);
+    
+    function gatherItems(value, index, array) {
+      txt += value + " (index: " + index + " )" + "<br>";
+    }
+    
+    document.getElementById("output").innerHTML = txt +
+      "<br>The length of the list is: " + peopleList.length;
+  </script>
+</body>
+</html>
+
