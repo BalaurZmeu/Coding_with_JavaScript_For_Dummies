@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>common array methods</title>
+</head>
+
+<body>
+  <script>
+    var animals = ["tiger" , "bear"];
+    var fruit = ["cantaloupe" , "orange"];
+    var dishes = ["plate" , "bowl" , "cup"];
+    var fruitsAndAnimals = fruit.concat(animals);
+    var txt = "";
+    txt += fruitsAndAnimals + "<br>";
+    var whereIsTheTiger = animals.indexOf("tiger");
+    txt += "The tiger has an index number of: "
+      + whereIsTheTiger + "<br>";
+    document.write(txt);
+  </script>
+</body>
+</html>
