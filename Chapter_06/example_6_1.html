@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Switch statement</title>
+</head>
+
+<body>
+  <h1>Using a switch statement.</h1>
+<script>
+  var languagePreference = prompt('Enter your language:');
+  if (languagePreference === '') {
+    languagePreference = "Spanish";
+  }
+  switch (languagePreference){
+    case "English":
+      document.write("Hello!");
+      break;
+    case "Spanish":
+      document.write("Hola!");
+      break;
+    case "German":
+      document.write("Guten Tag!");
+      break;
+    case "French":
+      document.write("Bon Jour!");
+      break;
+    default:
+      document.write("I'm sorry, I don't speak " +
+        languagePreference + "!");
+  }
+</script>
+</body>
+</html>
+
