@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Let's Count</title>
+</head>
+
+<body>
+  <script>
+    function displayNumbers(i) {
+      if (i < 11) {
+        setTimeout(() => {
+          document.write(i + "<br>");
+          displayNumbers(i + 1);
+        }, 1000);
+      }
+    }
+
+    displayNumbers(1);
+  </script>
+</body>
+</html>
+
