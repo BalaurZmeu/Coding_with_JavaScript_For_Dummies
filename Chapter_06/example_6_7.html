@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Guess the Word</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <script>
+    var guessedWord = prompt("What word am I thinking of?");
+    while (guessedWord != "sandwich") {
+      if (
+        guessedWord == "" ||
+        guessedWord == "quit" ||
+        guessedWord == "exit"
+      ) {break;}
+      guessedWord = prompt("No. That's not it. Try again.");
+    }
+    if (guessedWord == "sandwich") {
+      alert("Congratulations! That's exactly right!");
+    }
+  </script>
+</body>
+</html>
