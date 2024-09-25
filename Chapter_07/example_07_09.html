@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Using the Arguments Object</title>
+</head>
+
+<body>
+<script>
+  /**
+  * Flexible Welcome Message
+  */
+  function flexWelcome() {
+      var welcome = "Hello, ";
+      for (var i = 0; i < arguments.length; i++) {
+        welcome += arguments[i] + " ";
+      }
+      welcome += "!<br>";
+      document.write(welcome);
+  }
+  flexWelcome("Bill", "Joe", "Steve");
+  flexWelcome("Anna", "Lena", "Baerbork");
+</script>
+</body>
+</html>
+

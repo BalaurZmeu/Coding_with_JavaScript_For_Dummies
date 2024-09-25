@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Self-Executing Anonymous Functions</title>
+</head>
+
+<body>
+<script>
+  var myString = "I live outside the function";
+  (function(){
+    var myString = "I live inside the function";
+    document.write(myString + "<br>");
+  })();
+  document.write(myString + "<br>");
+</script>
+</body>
+</html>
+
