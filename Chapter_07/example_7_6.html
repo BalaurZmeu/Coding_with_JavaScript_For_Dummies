@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Arguments and Parameters</title>
+</head>
+<body>
+  <script>
+    /**
+    * Increments two numbers
+    * @param {number} number1
+    * @param {number} number2
+    */
+    function incrementNumbers(number1, number2) {
+      number1++;
+      number2++;
+      document.write("Incremented values: <br>");
+      document.write(number1 + " and " + number2 + "<br>");
+    }
+
+    var number1 = 3;
+    var number2 = 5;
+    incrementNumbers(number1, number2);
+
+    document.write("Original values: <br>"
+      + number1 + " and " + number2);
+  </script>
+</body>
+</html>

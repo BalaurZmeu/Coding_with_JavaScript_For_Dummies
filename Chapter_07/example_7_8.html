@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Default Arguments in the Function Head</title>
+</head>
+
+<body>
+<script>
+  function sayHello(greeting = "Hello", name = "World") {
+    document.write(greeting + ", " + name + "!<br>");
+  }
+
+  sayHello();
+  sayHello("Good Morning");
+  sayHello("Good Morning", "Bill");
+</script>
+</body>
+</html>
+
