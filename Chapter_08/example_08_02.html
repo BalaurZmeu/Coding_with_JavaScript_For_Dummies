@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Using an Object Constructor</title>
+</head>
+
+<body>
+<script>
+  var person = new Object();
+  person.firstName = "John";
+  person.lastName = "Doe";
+  person.age = 50;
+  person.eyeColor = "blue";
+  person.laugh = function(){
+    document.write("hahaha" + "<br>");
+  }
+  document.write(person.firstName + " " + person.lastName + "<br>");
+  person.laugh();
+</script>
+</body>
+</html>
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Chair Configurator</title>
+</head>
+
+<body>
+<script>
+  var myChair = {
+    "cushionMaterial": "",
+    "numberOfLegs": "",
+    "legHeight": ""
+  };
+
+  function configureChair() {
+    var userValue;
+    for (var property in myChair) {
+      userValue = prompt("Enter the value for " + property);
+      myChair[property] = userValue;
+    }
+  }
+
+  function writeChairReceipt() {
+	  document.write("<h2>Your chair will have the following configuration :</h2>" + "<br>");
+    for (var property in myChair) {
+      document.write(property + " : " + myChair[property] + "<br>");
+    }
+  }
+
+  configureChair();
+  writeChairReceipt();
+</script>
+</body>
+</html>
+
