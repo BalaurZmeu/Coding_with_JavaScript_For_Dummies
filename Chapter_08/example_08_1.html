@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>A JavaScript Guitar Object</title>
+</head>
+
+<body>
+  <script>
+    var guitar = {
+      brand: "Fender",
+      model: "Stratocaster",
+      color: "red",
+      price: 1200,
+      strum: function() {
+	document.write("Strumming the guitar...<br>");
+      },
+      play: function() {
+	document.write("Playing the guitar...<br>");
+      }
+    };
+    guitar.strum();
+    guitar.play();
+    document.write("The color of the guitar is " + guitar.color + ".<br>");
+  </script>
+</body>
+</html>
