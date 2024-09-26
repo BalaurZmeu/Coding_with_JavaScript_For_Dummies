@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Recursive Function with Termination and Base Conditions</title>
+</head>
+
+<body>
+<script>
+  function squareItUp(startingNumber) {
+    if ((typeof startingNumber != "number") || (startingNumber <= 1)) {
+      return -1;
+    }
+    document.write("squareItUp(" + startingNumber + ")<br>");
+    var square = startingNumber * startingNumber;
+    if (square > 1000000) {
+      document.write(square + "<br>");
+    } else {
+      document.write(square + "<br>");
+      squareItUp(square);
+    }
+  }
+  squareItUp(2);
+</script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Fatally Flawed Recursive Function</title>
+</head>
+
+<body>
+  <script>
+    function squareItUp(startingNumber) {
+      var square = startingNumber * startingNumber;
+      document.write(square + "<br>");
+      squareItUp(square);
+    }
+    squareItUp(2);
+  </script>
+</body>
+</html>
+
