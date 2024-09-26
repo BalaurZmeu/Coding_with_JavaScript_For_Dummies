@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Functions within Functions</title>
+</head>
+
+<body>
+<script>
+  function turnIntoMartian(myName) {
+    function recallName(myName) {
+      var martianName = myName + " the martian";
+    }
+    recallName(myName);
+    document.write(martianName);
+  }
+</script>
+</body>
+</html>
+

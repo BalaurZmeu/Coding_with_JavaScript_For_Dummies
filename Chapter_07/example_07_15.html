@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Return Value from the inner function</title>
+</head>
+
+<body>
+  <h1>Return Value from the inner function</h1>
+<script>
+  function turnIntoMartian(myName) {
+    function recallName(myName) {
+      var martianName = myName + " the martian";
+      return martianName;
+    }
+    var martianName = recallName(myName);
+    document.write(martianName);
+  }
+
+  turnIntoMartian("Hermione");
+</script>
+</body>
+</html>
