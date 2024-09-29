@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Delete Operator</title>
+</head>
+
+<body>
+<script>
+  var myObject = {
+    property1 : "the value of the property1",
+    property2 : "the value of the property2",
+    property3 : "the value of the property3"
+  };
+
+  delete myObject.property2;
+  
+  for (var property in myObject) {
+    document.write(property + " : " +
+      myObject[property] + "<br>");
+  }
+ 
+</script>
+</body>
+</html>
+
