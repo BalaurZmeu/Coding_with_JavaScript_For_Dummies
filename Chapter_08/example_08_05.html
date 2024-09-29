@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Creating a Method</title>
+</head>
+
+<body>
+  <h2>Creating a Method</h2>
+<script>
+  var sandwich = {
+    meat:"",
+    cheese:"",
+    bread:"",
+    condiment:"",
+    // creating a method makeSandwich
+    makeSandwich: function (meat,cheese,bread,condiment) {
+      sandwich.meat = meat;
+      sandwich.cheese = cheese;
+      sandwich.bread = bread;
+      sandwich.condiment = condiment;
+      var mySandwich = sandwich.bread + ", " +
+        sandwich.meat + ", " + sandwich.cheese +
+          ", " + sandwich.condiment;
+      return mySandwich;
+    } // end method makeSandwich
+  } // end object sandwich
+</script>
+</body>
+</html>
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Calling a Method</title>
+</head>
+
+<body>
+  <h2>Calling a Method</h2>
+<script>
+  var sandwich = {
+    meat:"",
+    cheese:"",
+    bread:"",
+    condiment:"",
+    // creating a method makeSandwich
+    makeSandwich: function (meat,cheese,bread,condiment) {
+      sandwich.meat = meat;
+      sandwich.cheese = cheese;
+      sandwich.bread = bread;
+      sandwich.condiment = condiment;
+      var mySandwich = sandwich.bread + ", " +
+        sandwich.meat + ", " + sandwich.cheese +
+          ", " + sandwich.condiment;
+      return mySandwich;
+    } // end method makeSandwich
+  } // end object sandwich
+  
+  //calling a method
+  var sandwichOrder = sandwich.makeSandwich("ham", "cheddar",
+    "wheat", "spicy mustard");
+  document.write("Your sandwich: <br>" + sandwichOrder + "<br>");
+  document.write("Your condiment is: <br>" + sandwich.condiment);
+</script>
+</body>
+</html>
+
