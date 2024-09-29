@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Using Object.create</title>
+</head>
+
+<body>
+  <h2>Using Object.create</h2>
+<script>
+  // create a generic Person
+  var Person = {
+    eyes: 2,
+    arms: 2,
+    feet: 2
+  }
+  
+  // create willieNelson object, based on Person
+  var willieNelson = Object.create(Person);
+  
+  // test the inherited property
+  document.write (willieNelson.feet); // outputs 2
+</script>
+</body>
+</html>
+
