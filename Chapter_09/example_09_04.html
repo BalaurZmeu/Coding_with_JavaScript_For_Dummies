@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>DIY Back Button</title>
+  <script>
+    function takeMeBack() {
+      window.location(window.history.go(-1));
+    }
+    
+    function getHistoryLength() {
+      var len = window.history.length;
+      return len;
+    }
+  </script>
+</head>
+
+<body>
+  <h2>Implementing a Back Button</h2>
+    <script>
+      var historyLength = getHistoryLength();
+      document.write(
+        "<p>Welcome! The number of pages you've visited\
+        in this window is: " + historyLength + ".</p>");
+    </script>
+    <br>
+    <a href="javascript:void(0);" onclick="takeMeBack();">
+      Go Back
+    </a>
+</body>
+</html>
+
