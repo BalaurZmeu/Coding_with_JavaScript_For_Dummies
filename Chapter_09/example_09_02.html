@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>window.location property</title>
+  <script>
+    function loadNewPage (url){
+      window.location = url;
+    }
+  </script>
+</head>
+
+<body>
+  <script>
+    var newURL = prompt(
+      "Please enter a web page address!");
+    
+    loadNewPage(newURL);
+  </script>
+</body>
+</html>
+
