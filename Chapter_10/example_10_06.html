@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Using getElementsByTagName</title>
+  <script>
+    function numberElements(tagName){
+      var getTags =
+        document.getElementsByTagName(tagName);
+        for (i = 0; i < getTags.length; i++){
+          getTags[i].innerHTML = i + 1;
+        }
+    }
+  </script>
+</head>
+
+<body>
+  <h1>this text will go away</h1>
+  <h1>this will get overwritten</h1>
+  <h1>JavaScript will erase this</h1>
+  <script>
+    numberElements("h1");
+  </script>
+</body>
+</html>
+
