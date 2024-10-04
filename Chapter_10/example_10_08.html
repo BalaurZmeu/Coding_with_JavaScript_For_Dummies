@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Generating a list</title>
+</head>
+
+<body>
+  <h2>Generating a list</h2>
+  <h3>Here are some types of balls</h3>
+  <ul id="ballList">
+  </ul>
+  
+  <script>
+    var typeOfBall =
+      ["basket", "base", "soccer", "foot", "hand"];
+    for (i = 0; i < typeOfBall.length; i++) {
+      var listElement = document.createElement("li");
+      listElement.innerHTML = typeOfBall[i];
+      document.getElementById("ballList").appendChild(listElement);
+    }
+  </script>
+</body>
+</html>
+
