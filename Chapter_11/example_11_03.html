@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Counting App 2</title>
+  <script>
+    // register events when window is loaded
+    window.addEventListener('load', registerEvents, false);
+    
+    // create a global counting variable
+    var theCount = 0;
+    
+    /**
+    Registers onclick event
+    */
+    function registerEvents(e) {
+      document.getElementById("incrementButton").
+        addEventListener('click', increaseCount, false);
+      document.getElementById("incrementButton").
+        addEventListener('click', changeSize, false);
+    }
+    
+    /**
+    Increments theCount and displays result
+    */
+    function increaseCount(e) {
+      theCount++;
+      document.getElementById("currentCount").
+        innerHTML = theCount;
+    }
+    
+    /**
+    Changes the font size of the count text
+    */
+    function changeSize(e) {
+      document.getElementById("currentCount").
+        style.fontSizeAdjust = theCount;
+    }
+  </script>
+</head>
+
+<body>
+  <h2>Counting App 2</h2>
+  <h3>Click the button to count</h3>
+  <p>Current Number:
+    <span id="currentCount">0</span>
+  </p>
+  <button id="incrementButton">
+    Increase Count
+  </button>
+</body>
+</html>
+
