@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Removing an Element</title>
+  <script>
+    function removeParagraph() {
+      var firstPara =
+        document.getElementById("firstParagraph");
+      firstPara.parentNode.removeChild(firstPara);
+    }
+  </script>
+</head>
+
+<body>
+  <h2>Removing an Element</h2>
+  <div id="gibberish">
+    <p id="firstParagraph">
+      Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Vestibulum
+      molestie pulvinar ante, a volutpat est
+      sodales et. Ut gravida justo ac leo euismod,
+      et tempus magna posuere. Cum sociis natoque
+      penatibus et magnis dis parturient montes,
+      nascetur ridiculus mus. Integer non mi iaculis,
+      facilisis risus et, vestibulum lorem. Sed quam
+      ex, placerat nec tristique id, mattis fringilla
+      ligula. Maecenas a pretium justo. Suspendisse
+      sit amet nibh consectetur, tristique tellus
+      quis, congue arcu. Etiam pellentesque dictum
+      elit eget semper. Phasellus orci neque, semper
+      ac tortor ac, laoreet ultricies enim.
+    </p>
+  </div>
+  <button onclick="removeParagraph();">
+    That's Gibberish!
+  </button>
+</body>
+</html>
+
