@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Counting App</title>
+  <script>
+    // run initializer function when window is loaded
+    window.onload = initializer;
+    
+    // create a global counting variable
+    var theCount = 0;
+    
+    /**
+    Registers onclick event
+    */
+    function initializer() {
+      document.getElementById("incrementButton").
+        onclick = increaseCount;
+    }
+    
+    /**
+    Increments theCount and displays result
+    */
+    function increaseCount() {
+      theCount++;
+      document.getElementById("currentCount").
+        innerHTML = theCount;
+    }
+  </script>
+</head>
+
+<body>
+  <h2>Counting App</h2>
+  <h3>Click the button to count</h3>
+  <p>Current Number:
+    <span id="currentCount">0</span>
+  </p>
+  <button id="incrementButton">
+    Increase Count
+  </button>
+</body>
+</html>
+
