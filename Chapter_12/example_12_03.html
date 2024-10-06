@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Subscribe to our newsletter!</title>
+  <script>
+    function setFormDefaults() {
+      document.forms.subscribeForm.method = "post";
+      document.forms.subscribeForm.target = "_blank";
+      document.forms.subscribeForm.action = "";
+      
+      // register the button events
+      document.getElementById("btnSubscribe").
+        addEventListener("click", submitForm);
+      document.getElementById("btnReset").
+        addEventListener("click", resetForm);
+        
+      function submitForm() {
+        document.forms.subscribeForm.submit();
+      }
+      
+      function resetForm() {
+        document.forms.subscribeForm.reset();
+      }
+    }
+  </script>
+</head>
+
+<body onload="setFormDefaults();">
+  <h3>Subscribe to our newsletter!</h3>
+  <form name="subscribeForm">
+    <label for="yourEmail">Email Address: </label>
+    <input type="email" name="email" id="yourEmail">
+    <button type="button" id="btnSubscribe">
+      Subscribe
+    </button>
+    <button type="button" id="btnReset">
+      Reset
+    </button>
+  </form>
+</body>
+</html>
