@@ -19,14 +19,17 @@
     function getElementStyles(e) {
       var computedColor =
         window.getComputedStyle(e.target).getPropertyValue("color");
+      var computedBackground =
+        window.getComputedStyle(e.target).getPropertyValue("background-color");
       var computedSize =
         window.getComputedStyle(e.target).getPropertyValue("font-size");
     
       var colorOutput = "color: " + computedColor;
+      var backgroundOutput = "background-color: " + computedBackground;
       var fontSizeOutput = "font size: " +computedSize;
       
       document.getElementById("stylesOutput").innerHTML =
-        colorOutput + "<br>" + fontSizeOutput;
+        colorOutput + "<br>" + backgroundOutput + "<br>" + fontSizeOutput;
     }
   </script>
 </head>
