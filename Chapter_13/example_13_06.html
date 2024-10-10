@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Rollover image size</title>
+  <script>
+    function growImage(imgToGrow) {
+      imgToGrow.width = 66;
+      imgToGrow.height = 66;
+    }
+
+    function restoreImage(imgToShrink){
+      imgToShrink.width = 63;
+      imgToShrink.height = 63;
+    }
+  </script>
+</head>
+
+<body>
+  <h3>Rollover image size</h3>
+  <img src="button2.png" id="myButton" onmouseover="growImage(this);"
+    onmouseout="restoreImage(this);" alt="mouse over me!"
+    width="63" height="63">
+</body>
+</html>
+
