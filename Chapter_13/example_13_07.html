@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>JavaScript slideshow</title>
+  <style>
+    #carousel {
+      position: absolute;
+      width: 800px;
+      height: 400px;
+      top: 100px;
+      left: 100px;
+      display: hidden;
+    }
+  </style>
+  <script>
+    var slides = [
+      "<div id='slide1'>my first slide<br><img src='img/image1.jpg'></div>",
+      "<div id='slide2'>my second slide<br><img src='img/image2.jpg'></div>",
+      "<div id='slide3'>my third slide<br><img src='img/image3.jpg'></div>"
+    ];
+    
+    var currentSlideIndex = 0;
+    var maxIndex = slides.length - 1;
+    
+    window.addEventListener('load', changeImage, false);
+    
+    function changeImage() {
+      console.log("changeImage function is called");
+      if (currentSlideIndex > maxIndex) {
+        currentSlideIndex = 0;
+      }
+      document.getElementById("carousel").
+        innerHTML = slides[currentSlideIndex];
+      console.log("displaying slide with the index: " +
+        currentSlideIndex);
+      currentSlideIndex++;
+      setTimeout(changeImage, 3000);
+    }
+  </script>
+</head>
+
+<body>
+  <h3>JavaScript slideshow</h3>
+  <div id="carousel"></div>
+</body>
+</html>
+
