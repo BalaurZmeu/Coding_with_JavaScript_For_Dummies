@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Looking for JavaScript</title>
+  <script>
+    window.addEventListener("load", registerEvents, false);
+    
+    function registerEvents(e) {
+      document.getElementById("askBtn").
+        addEventListener("click", findAnswer, false);
+    }
+    
+    function findAnswer() {
+      var question = document.getElementById("userQuestion").value;
+      var regexp = new RegExp("JavaScript");
+      
+      if (regexp.test(question) === true) {
+        document.getElementById("answer").innerHTML =
+          'JavaScript Question? Check out "Coding with\
+          JavaScript For Dummies" by Chris Minnick and\
+          Eva Holland';
+          console.log("JavaScript!");
+      } else {
+        document.getElementById("answer").innerHTML =
+          'Try and ask a JavaScript related question.';
+          console.log("Something else...");
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <h3>Looking for JavaScript</h3>
+  <form id="userInput">
+    <label>
+      Enter your question:<br>
+      <textarea id="userQuestion">
+      </textarea>
+    </label><br>
+    <button id="askBtn" type="button">
+      Get An Answer
+    </button>
+  </form><br>
+  <div id="answer"></div>
+</body>
+</html>
+
