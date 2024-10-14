@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Named Callback functions</title>
+  <script>
+    function doMath(number1, number2, callback) {
+      if (typeof callback === "function") {
+        var result = callback(number1, number2);
+        document.getElementById("theResult").innerHTML +=
+          (callback.toString() +"<br>The result is: " +
+            result + "<br><br>");
+      }
+    }
+    
+    function multiply(number1, number2) {
+      var calculation = number1 * number2;
+      return calculation;
+    }
+        
+    function divide(number1, number2) {
+      var calculation = number1 / number2;
+      return calculation;
+    }
+        
+    function remainder(number1, number2) {
+      var calculation = number1 % number2;
+      return calculation;
+    }
+    
+    document.addEventListener(
+      'DOMContentLoaded',
+      function() {
+        doMath(5, 2, multiply);
+        doMath(10, 3, divide);
+        doMath(81, 9, remainder);
+    }, false);
+  </script>
+</head>
+
+<body>
+  <h3>Named Callback functions</h3>
+  <h2>Do the Math</h2>
+  <div id="theResult"></div>
+</body>
+</html>
+
