@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Closures</title>
+  <script>
+    function greetVisitor(phrase) {
+      var welcome = phrase + ". Great to see you!";
+      var sayWelcome = function() {
+        alert(welcome);
+      }
+      return sayWelcome;
+    }
+
+    var personalGreeting = greetVisitor('Hola Amiga');
+    
+    document.addEventListener(
+      'DOMContentLoaded', personalGreeting , false);
+  </script>
+</head>
+
+<body>
+  <h3>Closures</h3>
+</body>
+</html>
+
