@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Function Factory</title>
+  <script>
+    function createMessageAlert(theMessage){
+      return function() {
+        alert (theMessage);
+      }
+    }
+
+    var badEmailError = createMessageAlert("Unknown email address!");
+    var wrongPasswordError = createMessageAlert("That's not your password!");
+
+    window.addEventListener('load', loader, false);
+
+    function loader(){
+      document.login.yourEmail.addEventListener(
+        'change', badEmailError);
+      document.login.yourPassword.addEventListener(
+        'change', wrongPasswordError);
+    }
+  </script>
+</head>
+
+<body>
+  <h3>Function Factory</h3>
+  <form name="login" id="loginform">
+    <p>
+      <label>Enter Your Email Address:
+        <input type="text" name="yourEmail">
+      </label>
+    </p>
+    <p>
+      <label>Enter Your Password:
+        <input type="text" name="yourPassword">
+      </label>
+    </p>
+    <button>Submit</button>
+  </form>
+</body>
+</html>
+
