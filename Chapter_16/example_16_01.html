@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Loading External Data Using AJAX Requests</title>
+  <script>
+    window.addEventListener('load', init, false);
+    
+    function init(e) {
+      document.getElementById('myButton').
+        addEventListener('click', documentLoader, false);
+    }
+    
+    function reqListener () {
+      console.log(this.responseText);
+      document.getElementById('content').innerHTML = this.
+        responseText;
+    }
+    
+    function documentLoader () {
+      var oReq = new XMLHttpRequest();
+      oReq.onload = reqListener;
+      oReq.open('get', 'loadme.txt', true);
+      oReq.send();
+    }
+  </script>
+</head>
+
+<body>
+  <h3>Loading External Data Using AJAX Requests</h3>
+  <form id="myForm">
+    <button id="myButton" type="button">
+      Click To Load
+    </button>
+  </form>
+  <div id="content">
+  </div>
+</body>
+</html>
