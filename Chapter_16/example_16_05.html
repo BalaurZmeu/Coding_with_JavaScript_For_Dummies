@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Displaying JSON Data</title>
+  <script>
+    window.addEventListener("load", init, false);
+    
+    function init(e) {
+      document.getElementById('myButton').
+        addEventListener('click', documentLoader, false);
+    }
+    
+    function reqListener() {
+      var obj = JSON.parse(this.responseText);
+      
+      document.getElementById('book_title').
+        innerHTML = obj.book_title;
+      document.getElementById('book_author').
+        innerHTML = obj.book_author;
+      document.getElementById('summary').
+        innerHTML = obj.summary;
+    }
+    
+    function documentLoader() {
+      var oReq = new XMLHttpRequest();
+      oReq.onload = reqListener;
+      oReq.open('get', 'example_16_04.json', true);
+      oReq.send();
+    }
+  </script>
+</head>
+
+<body>
+  <h3>Displaying JSON Data</h3>
+  <form id="myForm">
+    <button id="myButton" type="button">
+      Click to Load
+    </button>
+  </form>
+  <h2>Book Title</h2>
+  <div id="book_title"></div>
+  <h3>Authors</h3>
+  <div id="book_author"></div>
+  <h3>Summary</h3>
+  <div id="summary"></div>
+</body>
+</html>
+
