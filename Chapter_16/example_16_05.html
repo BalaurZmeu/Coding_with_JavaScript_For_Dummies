@@ -12,7 +12,7 @@
     }
     
     function reqListener() {
-      var obj = JSON.parse(this.responseText);
+      var obj = JSON.parse(this.responseText)[0];
       
       document.getElementById('book_title').
         innerHTML = obj.book_title;
@@ -24,8 +24,8 @@
     
     function documentLoader() {
       var oReq = new XMLHttpRequest();
-      oReq.onload = reqListener;
       oReq.open('get', 'example_16_04.json', true);
+      oReq.onload = reqListener;
       oReq.send();
     }
   </script>
