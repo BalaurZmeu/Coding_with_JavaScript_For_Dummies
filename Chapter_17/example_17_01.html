@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>The Position object</title>
+  <script>
+    window.onload = function() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          function (position) {
+            var div = document.getElementById("pos");
+            for (let key in position.coords) {
+              div.innerHTML += key + ': ' + position.coords[key] + "<br>";
+            }
+          },
+          function (error) {
+            document.getElementById("pos").innerHTML = "Error: " + error.message;
+          }
+        );
+      } else {
+        document.getElementById("pos").innerHTML = "Geolocation is not supported by this browser.";
+      }
+    };
+  </script>
+</head>
+
+<body>
+  <h3>The Position object</h3>
+  <div id="pos"></div>
+</body>
+</html>
+
